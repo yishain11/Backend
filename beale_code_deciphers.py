@@ -1,3 +1,4 @@
+### what is the code? you solved it! you should write it in the submission
 class FirstLetterIterator:
     def __init__(self, text, cipher):
         self.text = text
@@ -12,9 +13,11 @@ class FirstLetterIterator:
             raise StopIteration
         else:
             position = self.cipher[self.index]
-            #print(position)
+            ### remove commended out lines before submission
+            #print(position) 
             if position <= len(self.text):
                 self.index += 1
+                ### remove commended out lines before submission
                 #print(self.text[position])
                 return self.text[position]
 
@@ -118,12 +121,14 @@ def main():
                    "and our sacred honor."
 
     declaration_text = declaration_text.split()
+    ### remove commended out lines before submission
     #print(declaration_text)
     cipher = [4, 93, 52, 12, 41, 23, 9, 1, 34, 2, 11, 111, 6, 13, 24, 99, 100, 30, 10, 26, 16, 29, 155, 32, 37, 61, 15,
               42, 3, 633, 27, 70, 77, 45, 55, 43, 35, 108, 103, 56, 159, 166, 7, 8, 174, 36]
 
     iterator = FirstLetterIterator(declaration_text, cipher)
     for letter in iterator:
+        ### cleaner is to just return the first letter in the iterator itself
         print(letter[0], end="")
 
 
